@@ -299,6 +299,9 @@ INSERT INTO "announced_lga_results" ("result_id", "lga_name", "party_abbreviatio
 
 -- --------------------------------------------------------
 
+ALTER TABLE elections_lga ADD COLUMN state_id INTEGER;
+
+UPDATE elections_lga SET state_id = 25;
 --
 -- Table structure for table "announced_pu_results"
 --

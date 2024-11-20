@@ -20,11 +20,11 @@ class AnnouncedPuResult(models.Model):
 class LGA(models.Model):
     lga_id = models.IntegerField(primary_key=True)
     lga_name = models.CharField(max_length=50)
-    state_id = models.IntegerField()
+    state_id = models.IntegerField(default=25)
     lga_description = models.TextField(null=True, blank=True)
-    entered_by_user = models.CharField(max_length=50)
-    date_entered = models.DateTimeField()
-    user_ip_address = models.CharField(max_length=50)
+    entered_by_user = models.CharField(max_length=50, default='admin')
+    date_entered = models.DateTimeField(default='now')
+    user_ip_address = models.CharField(max_length=50, default='127.0.0.1')
 
 class Ward(models.Model):
     ward_id = models.IntegerField(primary_key=True)
