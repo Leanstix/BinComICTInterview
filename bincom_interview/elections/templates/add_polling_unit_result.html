@@ -1,0 +1,11 @@
+<h1>Add Results for a New Polling Unit</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="number" name="uniqueid" placeholder="Polling Unit Unique ID" required>
+    <h3>Party Scores</h3>
+    <div>
+        <input type="text" name="parties" placeholder="Party" required>
+        <input type="number" name="party_scores" placeholder="Score" required>
+    </div>
+    <button type="submit">Submit</button>
+</form>

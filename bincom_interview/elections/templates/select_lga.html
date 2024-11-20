@@ -1,0 +1,11 @@
+<h1>Select LGA</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="lga">Select Local Government Area:</label>
+    <select name="lga" id="lga">
+        {% for lga in lgas %}
+            <option value="{{ lga.lga_id }}">{{ lga.lga_name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,13 @@
+<h1>LGA Results</h1>
+<table>
+    <tr>
+        <th>Party</th>
+        <th>Total Score</th>
+    </tr>
+    {% for party, score in total_results.items %}
+    <tr>
+        <td>{{ party }}</td>
+        <td>{{ score }}</td>
+    </tr>
+    {% endfor %}
+</table>
